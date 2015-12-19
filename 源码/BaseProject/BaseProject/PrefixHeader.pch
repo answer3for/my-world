@@ -1,0 +1,51 @@
+//
+//  PrefixHeader.pch
+//  BaseProject
+//
+//  Created by tarena on 15/12/16.
+//  Copyright © 2015年 tarena. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+/*
+ 解决pch文件没有代码提示的问题：
+ 任意找一个位置 －－－ appdelegate.m文件
+
+*/
+
+#import <UIKit/UIKit.h>       // UI
+#import <Foundation/Foundation.h>   // NS
+
+// 这个文件中，经常会声明一些全局变量或者方法
+#import "AppDelegate.h"
+ 
+// 全局宏定义
+#import "Constants.h"
+#import "Methods.h"
+
+// 只要有网络操作，
+#import <AFNetworking.h>
+#import <UIKit+AFNetworking.h>
+
+// 可选的,与UIKit+AFNetworking.h冲突，二选一
+//#import <SDImageCache.h>
+
+// 头部刷新
+//#import <MJRefresh.h>
+#import "UIScrollView+Refresh.h"
+
+/* 按照功能需要可选 */
+//#import <FMDB.h>
+//#import <CocoaAsyncSocket.h>
+//......
+
+#import <Masonry.h>
+#import <BlocksKit.h>
+#import <BlocksKit+UIKit.h>
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
